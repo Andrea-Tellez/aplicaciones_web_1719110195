@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+	<head>
+		<title> Formularios</title>
+    <style>
+		    #table {
+		        width: 100%;
+		    }
+		    #table thead{
+		        background-color: turquoise;
+		        color: white;
+		    }
+		    #table tbody{
+		        background-color: pink;
+		        color: black;
+		    }
+        </style>
+	</head>
+	<body>
+		
+		<h1>Todos los tipos de datos admitidos por la etiqueta de html input, la etiqueta select, textarea y radio.</h1>
+		
+		<table id="table" border="1">
+		    <caption>Tabla de datos admitidos</caption>
+		    <thead>
+		        <tr>
+		            <th>Etiqueta</th>
+		            <th>Descripción</th>
+                <th>Ejemplo de uso</th>
+		        </tr>
+		    </thead>
+            <tbody>
+		        <tr>
+		            <td>&lt;input type="text"&gt;</td>
+                <td>Campo de texto de línea simple. Los saltos de línea son eliminados automáticamente del valor introducido.</td>
+                <td> <p>Nombre: <input type="text" name="nombre" size="30"></p>
+                </td>
+		        </tr>
+		        <tr>
+              <td>&lt;input type="button"&gt;</td>
+		          <td> Botón sin un comportamiento específico</td>
+              <td><input type="button" value="Este botón no realiza ninguna acción"></td>
+		        </tr>
+		        <tr>
+		          <td>&lt;input type="color"&gt;</td>
+              <td>Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores .</td>
+              <td><p>Selecciona un color:<input type="color" name="color_seleccionado"></p></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="date"&gt;</td>
+              <td> Control para introducir una fecha (año, mes y día, sin tiempo).</td>
+              <td><p>Fecha: <input type="date" name="fecha"></p></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="datetime-local"&gt;</td>
+              <td>Control para introducir fecha y hora, sin zona horaria específica..</td>
+              <td>Fecha y hora: <input type="datetime-local" name="fechaHora"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="email"&gt;</td>
+              <td>Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse.</td>
+              <td><p>Email: <input type="email" name="email" size="30"></p></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="file"&gt;</td>
+              <td> Control que permite al usuario seleccionar un archivo. Se puede usar el atributo accept para definir los tipos de archivo que el control podrá seleccionar.
+              </td>
+              <td><input type="file" name="archivo"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="hidden"&gt;</td>
+              <td>Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.</td>
+              <td><input type="hidden" name="nombre" value="hola"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="image"&gt;</td>
+              <td>Botón de envío de formulario con gráfico. Se debe usar el atributo src para definir el origen de la imagen y el atributo alt para definir un texto alternativo. Se puede usar los atributos height y width para definir el tamaño de la imagen en píxeles.</td>
+              <td><input type="image" name="punto" src="https://www.mclibre.org/consultar/htmlcss/html/ejemplos/formularios/formularios-image.php?radio=20&cx=70&cy=77.svg" alt="Punto"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="month"&gt;</td>
+              <td>Control para introducir un mes y año, sin zona horaria específica.</td>
+              <td>Mes: <input type="month" name="mes"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="number"&gt;</td>
+              <td> Control para introducir un número de punto flotante.</td>
+              <td>Indroduzca un número:<input type="number" name="numero"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="password"&gt;</td>
+              <td> Control de línea simple cuyo valor permanece oculto. Se puede usar el atributo maxlength para especificar la longitud máxima del valor que se puede introducir.</td>
+              <td><p>Contraseña:<input type="password" name="contraseña"></p></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="radio"&gt;</td>
+              <td>Botón radio. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo name están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez.</td>
+              <td>Sexo:<input type="radio" name="hm" value="h">Hombre<input type="radio" name="hm" value="m"> Mujer</td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="range"&gt;</td>
+              <td>Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
+              <p>min: 0</p> 
+              <p>max: 100 </p> 
+              <p>value: min + (max - min) / 2, o min si max es menor que min</p> 
+              <p>step: 1</td>
+              <td>Seleccione su nivel:<input type="range" name="rango"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="reset"&gt;</td>
+              <td>Botón que restaura los contenidos de un formulario a sus valores predeterminados.</td>
+              <td><input type="reset" value="restaurar"></tr>
+            <tr>
+		          <td>&lt;input type="search"&gt;</td>
+              <td>Cuadro de texto de línea simple para introducir textos de búsqueda. Los saltos de línea son eliminados automáticamente del valor introducido.</td>
+              <td>Búsqueda: <input type="search" name="busqueda" size="30"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="submit"&gt;</td>
+              <td>Botón que envía el formulario.</td>
+              <td><input type="submit" value="Enviar"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="tel"&gt;</td>
+              <td>Control para introducir un número telefónico. Los saltos de línea son eliminados automáticamente del valor introducido, pero no hay otra sintaxis forzada. Se pueden usar atributos como pattern y maxlength para restringir los valores introducidos en este control.</td>
+              <td>Teléfono: <input type="tel" name="telefono"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="time"&gt;</td>
+              <td>Control para introducir un valor de tiempo sin zona horaria específica.</td>
+              <td>Hora: <input type="time" name="hora"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="url"&gt;</td>
+              <td>Campo para editar una URL. El valor introducido se valida para que contenga una cadena vacía o una ruta URL absoluta antes de enviarse. Los saltos de línea y espacios en blanco al principio o al final del valor son eliminados automáticamente</td>
+              <td>URL: <input type="url" name="direccion" size="30"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="week"&gt;</td>
+              <td>Control para introducir una fecha que consiste en número de semana del año y número de semana sin zona horaria específica.</td>
+              <td>Semana: <input type="week" name="semana"></td>
+		        </tr>
+            <tr>
+		          <td>&lt;input type="checkbox"&gt;</td>
+              <td>Casilla de selección. Se debe usar el atributo value para definir el valor que se enviará por este elemento. Se usa el atributo checked para indicar si el elemento está seleccionado. </td>
+              <td><input type="checkbox" name="casilla">Casilla 1</td>
+		        </tr>
+            <tr>
+              <td>&lt;select autofocus&gt;</td>
+              <td>Este atributo permite especificar un formulario de control que debería tener enfoque de entrada cuando se carga la página, a no ser que el usuario lo sobreescriba, por ejemplo, escribiendo un control diferente. Solo un elemento formulario puede tener el elemento de enfoque de entrada por documento, por lo cual es un atributo booleano.</td>
+              <td><label for="fruta">Selecciona una fruta:</label><select name="frutas" id="frutas" autofocus><option svalue="manzana">manzana</option><option value="sandia">sandia</option><option value="mango">mango</option><option value="fresa">fresa</option></select></td>
+            </tr>
+            <tr>
+              <td>&lt;select disabled&gt;</td>
+              <td>Un valor booleano que indica si el control se encuentra deshabilitado o no. Si el atributo toma el valor "disabled" o la cadena vacía (""), o si está simplemente presente, el control estará deshabilitado.</td>
+              <td><label for="trasportes">Selecciona un medio de trasporte:</label><select name="trasportes" id="trasportes" disabled><option value="automóvil">automóvil</option><option value="avión">avión</option><option value="bicicleta">bicicleta</option><option value="moto">moto</option></select></td>
+            </tr>
+            <tr>
+              <td>&lt;select form="form_id"&gt;</td>
+              <td>El valor del atributo id del formulario con el que este control está asociado.</td>
+              <td><form action="/action_page.php" id="comidaform"><label for="fname">Nombre:</label><input type="text" id="fname" name="fname"><input type="submit"></form><label for="comida">Seleciona una comida:</label><select name="comida" id="comida" form="comidaform"><option value="pizza">pizza</option><option value="tacos">tacos</option><option value="hambuergesa">hamburguesa</option><option value="pozole">pozole</option></select></td>
+            </tr>
+            <tr>
+              <td>&lt;select multiple&gt;</td>
+              <td>Un valor booleano que indica si el usuario debería poder elegir más de una opción o no.</td>
+              <td><label for="colores">Selecciona un color:</label><select name="colores" id="colores" multiple><option value="rosa">rosa</option><option value="verde">verde</option><option value="rojo">rojo</option><option value="blanco">blanco</option></select></td>
+            </tr>
+            <tr>
+              <td>&lt;select name&gt;</td>
+              <td>Un nombre para el control. Este nombre será enviado por el navegador al agente procesador, emparejado con el contenido del atributo value de las opciones seleccionadas o el contenido mismo de éstas.</td>
+              <td><label for="prenda">Seleciona una prenda:</label><select name="prenda" id="prenda"><option value="blusa">blusa</option><option value="falda">falda</option><option value="camisa">camisa</option><option value="sueter">sueter</option></select></td>
+            </tr>
+            <tr>
+              <td>&lt;select required&gt;</td>
+              <td>Es un elemento boooleano que indica si la opcion puede quedar sin seleccionar o si es requerida.</td>
+              <td><label for="bebida">Selecciona una bebida:</label><select name="bebidas" id="bebidas" required><option value="agua">agua</option><option value="refresco">refresco</option><option value="jugo">jugo</option><option value="malteada">malteada</option></select></td>
+            </tr>
+            <tr>
+              <td>&lt;select size&gt;</td>
+              <td>Un entero para ser usado como el número de líneas (con o sin opciones) que este control mostrará al mismo tiempo.</td>
+              <td><label for="accesorio">Selecciona un accesorio:</label><select name="accesorios" id="accesorios" size="2"><option value="collar">collar</option><option value="anillo">anillo</option><option value="lentes">lentes</option><option value="gorro">gorro</option></select></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea autofocus&gt;</td>
+              <td>Este atributo booleano te permite especificar que un control de un formulario adquiera el foco cuando se carga la página, salvo que el usuario anule esto , por ejemplo tecleando en un control diferente. Sólo se puede especificar este atributo en los elementos asociados a formularios.</td>
+              <td><textarea autofocus>hola </textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea cols="number"&gt;</td>
+              <td>La anchura visible del control de texto, en caracteres de anchura media. Si está definido debe ser positivo. Si no, por defecto, el valor es 20 (HTML 5).</td>
+              <td><textarea rows="4" cols="30">hola </textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea dirname&gt;&lt;/textarea&gt;</td>
+              <td>Un nombre para un nuevo campo especialmente creado con el fin de transmitir la direccionalidad del texto ingresado. </td>
+              <td><form action="/action_page.php">Text:<textarea name="explanation" dirname="explanation.dir"></textarea><input type="submit" value="Submit"></form></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea disabled&gt;</td>
+              <td>Este atributo booleano indica que el usuario no puede interactuar con el control. </td>
+              <td><textarea disabled>Hola </textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea form="form_id"&gt;</td>
+              <td>El formulario al cual el elemento textarea está asociado (el propietario del formulario). El valor del atributo debe ser un ID de un elemento formulario del mismo documento.</td>
+              <td><form action="/action_page.php" id="usrform">Nombre: <input type="text" name="usrname"><input type="submit"></form><textarea name="comment" form="usrform">Indroduzca el texto</textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea maxlength&gt;</td>
+              <td>Indica el número máximo de caracteres   que el usuario puede insertar.</td>
+              <td><textarea maxlength="20">Indroduzca los números</textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea name="text"&gt;</td>
+              <td>Un nombre para el control. Este nombre será enviado por el navegador al agente procesador, emparejado con el contenido del elemento.</td>
+              <td><form action="/action_page.php"><textarea name="comment">ingrese el texto...</textarea><input type="submit"></form></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea placeholder&gt;</td>
+              <td>Se puede añadir un indicación para el usuario que defina que se debe insertar en el control.</td>
+              <td><textarea placeholder="Describe las características de un auto"></textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea readonly&gt;</td>
+              <td>Este atributo booleano indica que el usuario no puede modificar el valor del control. </td>
+              <td><textarea readonly>No puedes realizar ninguna acción</textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea required&gt;</td>
+              <td>Este atributo indica que el usuario debe rellenar el espacio con un valor antes de poder enviar el formulario.</td>
+              <td><form action="/action_page.php"><textarea name="comment" required></textarea><input type="submit"></form></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea rows&gt;</td>
+              <td>El número de líneas visibles en el control.</td>
+              <td><textarea rows="3" cols="30">hola </textarea></td>
+            </tr>
+            <tr>
+              <td>&lt;textarea wrap="soft|hard"&gt;</td>
+              <td>Indica como el control envuelve al texto.Los posibles valores son:
+             <p>hard: El navegador insertar automáticamente caracteres de nueva línea  para que ninguna línea tenga más anchura que la del control; el atributo  cols debe estar espeficicado. </p>
+            <p> soft: El navegador asegura que todas las  nuevas líneas constan de la pareja de caracteres , pero no insertar nuevas líneas adicionales.</td>
+              <td><textarea rows="2" cols="20" wrap="hard">hola.</textarea></td>
+            </tr>
+            <td>&lt;type=radio&gt;</td>
+              <td>El elemento input, teniendo el valor "radio" en su atributo type, representa una opción que pertenece a un grupo en el que no más de una opción puede ser seleccionada al mismo tiempo. Estos grupos están normalmente conformados por un número de botones de opción, todos compartiendo el mismo valor en el atributo name.Todos los botones de opción en un grupo deben estar en el mismo documento y pertenecer al mismo formulario, o no pertenecer a ningún formulario.</td>
+              <td><form action="../../form-result.php" method="post" target="_blank"><p>Selecciona un curso:<br><label><input type="radio" name="curso" value="ceramica"> Cerámica</label><br><label><input type="radio" name="curso" value="jardineria" checked> Jardinería</label><br><label><input type="radio" name="curso" value="pintura"> Pintura</label></p><p><input type="submit" value="Enviar datos"><input type="reset" value="Restaurar formulario"></p></form></td>
+            </tr>
+            
+ 	        </tbody>
+		</table>	
+	</body>
+</html>
